@@ -52,9 +52,9 @@ int main(int argc, char* argv[])
     std::string input_str {args[1]};    // take second argument as input string
 
     std::vector<std::function<void(std::string)>> printers = {
-    print_lowercase,
-    print_uppercase,
-    print_ascii
+        print_lowercase,
+        print_uppercase,
+        print_ascii
     };  
 
     if (args[2] == "--lower") {
