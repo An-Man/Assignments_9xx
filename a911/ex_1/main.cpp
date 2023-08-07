@@ -8,11 +8,13 @@
     determines which function in the array to call.
  */
 
+
 #include <iostream>
-#include <functional>
 #include <vector>
-#include <cctype>
 #include <stdexcept>
+#include <cctype>
+#include <string>
+#include <functional>
 
 void print_lowercase(std::string str) {
     for (auto c : str) {
@@ -46,15 +48,14 @@ int main(int argc, char* argv[])
         throw std::runtime_error("Enter two arguments after program call:\n"
         "a string followed by --lower, --upper or --ascii");
     }
-
-    // store functions using std::function
-    std::vector<std::function<void(std::string)>> printers = {
-        print_lowercase,
-        print_uppercase,
-        print_ascii
-    };                              
-
+                      
     std::string input_str {args[1]};    // take second argument as input string
+
+    std::vector<std::function<void(std::string)>> printers = {
+    print_lowercase,
+    print_uppercase,
+    print_ascii
+    };  
 
     if (args[2] == "--lower") {
         printers[0](input_str);
