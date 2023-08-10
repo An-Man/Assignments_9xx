@@ -1,10 +1,13 @@
-/* Exercise 1
+/*  Exercise 1
 
     Use iterator-based for loop to go through a string and print individual 
     characters.  What happens when there's a character outside of ASCII charset? 
     (try with e.g. emoji, åäö, etc.)
+    Also print out the character as integers (to see the value of bytes beneath)
 
-    Also print out the character as integers (to see the value of bytes beneath) */
+    Exercise 2
+    Read through iterator requirements and familiarise yourself with UTF8.
+*/
 
 
 #include <string>
