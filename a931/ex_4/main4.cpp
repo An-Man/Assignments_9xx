@@ -8,9 +8,9 @@
 
 
 int main() {
-    std::string str {"aaBBöÖäÄ"};
+    std::string str {"🍍öaaa"};
 
     for (Str_Iterator it (str.begin()); it != str.end(); ++it) {
-        std::cout << static_cast<uint32_t>(*it) << '\n';
+        std::cout << std::hex << static_cast<uint32_t>(*it) << '\n';
     }
 }

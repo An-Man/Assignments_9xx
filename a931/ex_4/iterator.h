@@ -51,7 +51,7 @@ class Str_Iterator
             return *this;
         }
 
-        Str_Iterator& operator++(int) {
+        Str_Iterator operator++(int) {
             Str_Iterator temp = *this;
             ++(*this);
             return temp;
